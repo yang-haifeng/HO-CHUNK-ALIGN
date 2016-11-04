@@ -1,0 +1,9 @@
+c	out.txt
+
+      real*8 massd,tauz30,tauzmax,tauzmin
+     1 ,taur,rhomin,rho30,rhomax,oadeg,rho0,massenv,massdisk,taux,rdx
+      integer iwriteim
+      
+
+      common /outp/ massd,tauz30,tauzmax,tauzmin,massenv,massdisk
+     1 ,taux,rdx,taur,rhomin,rho30,rhomax,oadeg,rho0,iwriteim

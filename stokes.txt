@@ -1,0 +1,8 @@
+c	stokes.txt
+
+      real*8 sip,sqp,sup,svp,cost,sint,phi,pi,r2p
+     1 ,cosp,sinp,hit,htot,peak
+      integer idust
+
+      common /s1/ sip,sqp,sup,svp,cost,sint,phi,pi,r2p
+     1 ,cosp,sinp,hit,htot,peak,idust

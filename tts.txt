@@ -1,0 +1,52 @@
+c	tts.txt
+
+       integer nxhst,nx,nmu
+
+       parameter(nxhst=499,nx=499,nmu=11)
+
+      real*8 image(nx,nx,nmu),si(nmu,3),sq(nmu,3),su(nmu,3)
+     1 ,sv(nmu,3),spi(nmu,3),spq(nmu,3),spu(nmu,3),spv(nmu,3)
+     1 ,si2(nmu,3),sq2(nmu,3),su2(nmu,3),sv2(nmu,3)
+     1 ,star(nmu),starq(nmu),staru(nmu),starv(nmu)
+     1 ,tauenv(nmu)
+     1 ,imagei(nx,nx,nmu),imageq(nx,nx,nmu)
+     1 ,imageu(nx,nx,nmu),imagev(nx,nx,nmu),image2(nx,nx,nmu)
+     1 ,tihst(nxhst,nxhst),tqhst(nxhst,nxhst)
+     1 ,tuhst(nxhst,nxhst),tvhst(nxhst,nxhst)
+     1 ,ti(3),tq(3),tu(3),tv(3)
+     1 ,tis(3),tqs(3),tus(3),tvs(3)
+     1 ,ti2(3),tq2(3),tu2(3),tv2(3)
+
+      real*8 u(nmu),aperture2(3)
+     1 ,nscat,tot,zmax,rmax,a,c0,lp
+     1 ,rmin,rmind,rddust,z1,b,zmin,flux,xmaxp
+     1 ,rsol,sflux,aflux,cosb,sinb,rmaxd,rmaxi
+     1 ,rpolbeam,dmu,dmuhalf,thetmu0,autors,rstar,wave
+     1 ,tstar,normstar,thete,phie,coste,sinte,cospe,sinpe
+     1 ,sfactor,fractxh,rhod0
+     1 ,tid,tqd,tud,tvd
+
+        integer nums(nmu,3),numt(3),numi(nx,nx,nmu)
+     1 ,np,npout,npsav,limb,occult,nfinei,nfined 
+     1 ,nri,nzi,nt,iwrite,isot,itherm,ipeel,ispot
+
+      common /p1/ image
+     1 ,si,sq,su,sv,spi,spq,spu,spv
+     1 ,si2,sq2,su2,sv2
+     1 ,star,starq,staru,starv,tauenv
+     1 ,imagei,imageq,imageu,imagev,image2
+     1 ,tihst,tqhst,tuhst,tvhst
+     1 ,ti,tq,tu,tv
+     1 ,tis,tqs,tus,tvs
+     1 ,ti2,tq2,tu2,tv2
+     1 ,u,aperture2
+     1 ,nscat,tot,zmax,rmax,a,c0,lp
+     1 ,rmin,rmind,rddust,z1,b,zmin,flux,xmaxp
+     1 ,rsol,sflux,aflux,cosb,sinb,rmaxd,rmaxi
+     1 ,rpolbeam,dmu,dmuhalf,thetmu0,autors,rstar,wave
+     1 ,tstar,normstar,thete,phie,coste,sinte,cospe,sinpe
+     1 ,sfactor,fractxh,rhod0
+     1 ,tid,tqd,tud,tvd
+     1 ,nums,numt,numi
+     1 ,np,npout,npsav,limb,occult,nfinei
+     1 ,nfined,nri,nzi,nt,iwrite,isot,itherm,ipeel,ispot

@@ -1,0 +1,24 @@
+      integer ncvg,npvg
+
+c      parameter(ncvg=9,npvg=18)
+      parameter(ncvg=36,npvg=72)
+
+       real*8 xvg,yvg,zvg,xs,ys,zs,xse,yse,zse,rpse,rs,
+     1  binpvg,bincvg,ivg(ncvg,npvg),
+     1  qvg(ncvg,npvg),uvg(ncvg,npvg),vvg(ncvg,npvg),
+     1  vgfactor,ivgflux,qvgflux,uvgflux,vvgflux,
+     1  ivgerr,qvgerr,uvgerr,vvgerr,
+     2  xvg0,yvg0,zvg0,xsrc0,ysrc0,zsrc0,
+     2  isrc0,qsrc0,usrc0,vsrc0
+       integer counthot,countvg,iveeg,outillum
+
+       common /vger1/ xvg,yvg,zvg,xs,ys,zs,
+     1 xse,yse,zse,rpse,rs,
+     1 binpvg,bincvg,
+     1 ivg,qvg,uvg,vvg,
+     1 vgfactor,ivgflux,qvgflux,uvgflux,vvgflux,
+     1 ivgerr,qvgerr,uvgerr,vvgerr,
+     1 counthot,countvg,iveeg,outillum,
+     2  xvg0,yvg0,zvg0,xsrc0,ysrc0,zsrc0,
+     2  isrc0,qsrc0,usrc0,vsrc0
+

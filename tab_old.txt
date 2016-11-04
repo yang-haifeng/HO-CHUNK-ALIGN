@@ -1,0 +1,18 @@
+c 00/11/27 (mjw):  add DPHI and related integers
+c                  add DPHI dimension to FMat (which is now normalized)
+c                  change scattering quantities (BUT NOT angles) to real*4
+c                  add DPHI,ndphi to common block
+
+      integer MXTHET,MXTHETB,MXDPHI
+      parameter(MXTHET=38,MXTHETB=38,MXDPHI=74)
+
+      real*4 Fmat(4,4,MXTHETB,MXTHET,MXDPHI)
+     $ ,kapd(MXTHETB),kapd_q(MXTHETB),Ccpol(MXTHETB),rlam(MXTHETB)
+
+      real*8 dphi(MXDPHI),cosarr(MXTHET),cosbarr(MXTHETB)
+
+      integer ntheta,nthetab,ndphi
+
+      common /p3/ dphi,cosarr,cosbarr,kapd,kapd_q,Ccpol,rlam,
+     $ Fmat,ntheta,nthetab,ndphi
+

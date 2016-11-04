@@ -1,0 +1,19 @@
+c	opacin.txt
+
+      real*8 opaci(602,602),sigi(602,602),ri(602),zi(602)
+     1 ,dri,hdri,hdzi,dzi,rate
+     1 ,opb,iopb,massc,rc,rchole,msol,rmine,ex1,z01,rhoconst1
+     1 ,exf,thet1,ex2,z02,rhoconst2,thet2,zflowmin,zbub1,zbub2,nbub
+     1 ,buboa,windmu0,rhoe0,c1e,c2e,cosbuboa,rhoamb,rminsq
+     1 ,xymaxdens
+
+c       integer hotflag(201,201)
+      integer ihole,ipoly,istream,ibub
+
+      common /opi/ opaci,sigi,ri,zi,dri,hdri,hdzi,dzi,rate
+     1 ,opb,iopb,massc,rc,rchole,msol,rmine,ex1,z01,rhoconst1
+     1 ,exf,thet1,ex2,z02,rhoconst2,thet2,zflowmin,zbub1,zbub2,nbub
+     1 ,buboa,windmu0,rhoe0,c1e,c2e,cosbuboa,rhoamb,rminsq
+     1 ,xymaxdens
+c     1 ,hotflag
+     1 ,ihole,ipoly,istream,ibub

@@ -1,0 +1,33 @@
+c	grid.txt
+
+      integer nrg,ntg,npg
+      real*8 texp,rexp
+
+c	*****  set ntg to an odd number!!!!! *******
+c	will work on a fix later...
+
+      parameter(nrg=400,ntg=199,npg=91,rexp=3,texp=1)
+c     spherical cloud
+c      parameter(nrg=50,ntg=93,npg=100,rexp=1,texp=1)
+
+      real*8 densarr(nrg,ntg,npg),massarr(nrg,ntg,npg)
+     1 ,costbzarr(nrg,ntg,npg)
+     1 ,sintbzarr(nrg,ntg,npg),cospbzarr(nrg,ntg,npg)
+     1 ,sinpbzarr(nrg,ntg,npg),phibzarr(nrg,ntg,npg)
+     1 ,rarr(nrg),r2arr(nrg),thetarr(ntg),tmptharr(ntg)
+     1 ,sintarr(ntg)
+     1 ,costarr(ntg),tan2arr(ntg),phiarr(npg),aarr(npg)
+     1 ,barr(npg)
+     1 ,pathI(nrg,ntg,npg),pathQ(nrg,ntg,npg)
+     1 ,pathU(nrg,ntg,npg),pathV(nrg,ntg,npg)
+     1 ,volarr(nrg,ntg,npg)
+     1 ,ravearr(nrg-1),thetavearr(ntg-1),phiavearr(npg-1)
+
+      common /gr/ densarr,massarr,costbzarr,sintbzarr,cospbzarr
+     1 ,sinpbzarr,phibzarr
+     1 ,rarr,r2arr,thetarr
+     1 ,tmptharr,sintarr
+     1 ,costarr,tan2arr,phiarr,aarr,barr
+     1 ,pathI,pathQ,pathU,pathV,volarr
+     1 ,ravearr,thetavearr,phiavearr
+

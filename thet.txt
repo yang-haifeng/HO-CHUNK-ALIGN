@@ -1,0 +1,6 @@
+c	thet.txt
+
+	real mub(100),probb(100),fact
+	integer m
+
+	common /pthet/ mub,probb,fact,m

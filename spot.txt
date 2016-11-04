@@ -1,0 +1,11 @@
+      real*8 ampl,spotlat,spotlon,thspot,th0sp1,th0sp2,
+     $     phi0sp1,phi0sp2,scspot1,scspot2,ssspot1,ssspot2,
+     $     cspot1,cspot2,csprad,spotin,thspotin,cspradin,
+     $     tspot
+      integer spotflag,npspot,nspot
+      common/amplitud/ampl,spotlat,spotlon,
+     $     thspot,th0sp1,th0sp2,
+     $     phi0sp1,phi0sp2,scspot1,scspot2,ssspot1,ssspot2,
+     $     cspot1,cspot2,csprad,spotin,thspotin,cspradin,
+     $     tspot,spotflag,npspot,nspot
+

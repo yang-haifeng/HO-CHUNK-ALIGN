@@ -1,0 +1,8 @@
+c	tabl.txt
+	integer ntab
+	parameter (ntab=100)
+
+	real*8 xmu(ntab),prob(ntab),delmu
+	
+
+	common /tab/ xmu,prob,delmu

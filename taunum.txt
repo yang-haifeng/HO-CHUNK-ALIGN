@@ -1,0 +1,10 @@
+c	taunum.txt
+
+	real*8 tau,rp,xp,yp,zp,ux,uy,cosmax,sp2
+     1 ,rfraci,zfraci,rmax2,uz,rsq,rtot
+
+	integer exitflag,aflag,iflag
+
+	common /ptau/ tau,rp,xp,yp,zp,ux,uy
+     1 ,cosmax,sp2,rfraci,zfraci,rmax2,rsq,rtot
+     1 ,uz,exitflag,aflag,iflag

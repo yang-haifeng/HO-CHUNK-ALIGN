@@ -1,0 +1,2 @@
+      integer i1
+      common/randi1/i1
