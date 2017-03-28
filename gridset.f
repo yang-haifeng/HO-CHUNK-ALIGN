@@ -307,14 +307,19 @@ c     calculate density and B-field in grid
                      massdisk=massdisk+densd*volarr(ir,it,ip)
                      densarr(ir,it,ip)=(dense+densd)*rmincgs
                      massarr(ir,it,ip)=(dense+densd)*volarr(ir,it,ip)
-                     call bset(rad/rmax,rc/rmax,cost,sint,phi,r2p,pi,
-     1                    costbz,sintbz,phibz,cospbz,sinpbz,gs,ga,gb,
-     1                    gc,pwr)
-                     costbzarr(ir,it,ip)=costbz
-                     sintbzarr(ir,it,ip)=sintbz
-                     phibzarr(ir,it,ip)=phibz
-                     cospbzarr(ir,it,ip)=cospbz
-                     sinpbzarr(ir,it,ip)=sinpbz
+c                    call bset(rad/rmax,rc/rmax,cost,sint,phi,r2p,pi,
+c    1                    costbz,sintbz,phibz,cospbz,sinpbz,gs,ga,gb,
+c    1                    gc,pwr)
+c                    costbzarr(ir,it,ip)=costbz
+c                    sintbzarr(ir,it,ip)=sintbz
+c                    phibzarr(ir,it,ip)=phibz
+c                    cospbzarr(ir,it,ip)=cospbz
+c                    sinpbzarr(ir,it,ip)=sinpbz
+                     costbzarr(ir,it,ip)=1.
+                     sintbzarr(ir,it,ip)=0.
+                     phibzarr(ir,it,ip)=0.
+                     cospbzarr(ir,it,ip)=1.
+                     sinpbzarr(ir,it,ip)=0.
                   end do
                else             !2-D atmosphere
                   ip=1       
