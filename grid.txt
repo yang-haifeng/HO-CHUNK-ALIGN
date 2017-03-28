@@ -22,6 +22,7 @@ c      parameter(nrg=50,ntg=93,npg=100,rexp=1,texp=1)
      1 ,pathU(nrg,ntg,npg),pathV(nrg,ntg,npg)
      1 ,volarr(nrg,ntg,npg)
      1 ,ravearr(nrg-1),thetavearr(ntg-1),phiavearr(npg-1)
+     1 ,temparr(nrg,ntg,npg)
 
       common /gr/ densarr,massarr,costbzarr,sintbzarr,cospbzarr
      1 ,sinpbzarr,phibzarr
@@ -30,4 +31,5 @@ c      parameter(nrg=50,ntg=93,npg=100,rexp=1,texp=1)
      1 ,costarr,tan2arr,phiarr,aarr,barr
      1 ,pathI,pathQ,pathU,pathV,volarr
      1 ,ravearr,thetavearr,phiavearr
+     1 ,temparr
 
