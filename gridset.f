@@ -47,9 +47,9 @@ c     make grid include minimum and maximum values.
       print*, 'grid setup'
 
 c     read in galli-shu-toroid constants
-      open(unit=15,file='gs.in',status='unknown')
-        read(15,*) gs,ga,gb,gc,pwr
-      close(15)
+c     open(unit=15,file='gs.in',status='unknown')
+c       read(15,*) gs,ga,gb,gc,pwr
+c     close(15)
 
 c     rgrid
       gflag=0
