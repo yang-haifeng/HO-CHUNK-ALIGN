@@ -57,7 +57,6 @@ c cpu time variables
       character cmsgnm*70
       external etime
      
-      write(6,*) 'check, pi',pi
       icount=0
 
 c     set up density grid
