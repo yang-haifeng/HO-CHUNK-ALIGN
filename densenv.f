@@ -42,7 +42,8 @@ c            print*,'thetin,pi',thetin*180.d0/pi,pi
 c         endif
 c     if (iflag.eq.1) print*,'xmu,rx,xmu0,iflag',xmu,rx,xmu0,iflag
          factor=1.d0/((xmu/xmu0)+2.d0*(xmu0**2)/rx)
-         dens=rhoe0*(rx**(-1.5))*factor/(dsqrt(1.d0+xmu/xmu0))
+c        dens=rhoe0*(rx**(-1.5))*factor/(dsqrt(1.d0+xmu/xmu0))
+	 dens=1.d-18 ! set to constant envelope for now.
          rx2=rad/rchole         
          call zerod(xmu,rx2,xmu0new,iflag)
 c     if (iflag.eq.1) print*,'xmu,rx2,xmu0new,iflag',xmu,rx2,
