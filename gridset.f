@@ -320,6 +320,8 @@ c                    sinpbzarr(ir,it,ip)=sinpbz
                      phibzarr(ir,it,ip)=0.
                      cospbzarr(ir,it,ip)=1.
                      sinpbzarr(ir,it,ip)=0.
+
+		     temparr(ir,it,ip)=30.!Constant Temperature
                   end do
                else             !2-D atmosphere
                   ip=1       
