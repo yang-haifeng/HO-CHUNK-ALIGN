@@ -67,6 +67,7 @@ OBJSB	=	bset.o \
 		initp.o \
                 initpout.o \
 		initpspot.o \
+		initpDust.o \
 		linterp.o \
                 locate.o \
 		namer.o \
