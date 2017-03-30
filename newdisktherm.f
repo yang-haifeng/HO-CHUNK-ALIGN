@@ -56,6 +56,10 @@ c cpu time variables
       real etime,cpusec,time(2)
       character cmsgnm*70
       external etime
+
+c flag for disk illumination
+      logical diskillum
+      diskillum=.TRUE.
      
       icount=0
 
@@ -136,6 +140,9 @@ c     use explicit format to keep g77 happy
 c     inside illumination
          if (iphot.ge.npout) then
 c     initialize stokes parameters, incident angles
+
+            if (diskillum) goto 50 
+
             if (ispot.eq.0) then
                call initp
             else
@@ -212,6 +219,9 @@ c     sipnew=sip
      1           ,peak,tsum,ii,idust,iflag,iphot,eps)   
                endif
             endif
+         goto 60
+50       call initpDust(ii)
+60       continue
          else
 c     outside illumination
             call initpout
