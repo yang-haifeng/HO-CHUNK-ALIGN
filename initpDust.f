@@ -44,8 +44,8 @@ c     sample cosp, sinp, direction of photon in phi
 
 c     sample radius of the location
       xran = ran2(i1)
-c     rtot = dcbrt(xran)*rarr(nrg) ! Uniformly pick a location 
-      rtot = xran*rarr(nrg) ! Uniformly pick a location 
+      rtot = (xran**(1.d0/3.d0))*rarr(nrg) ! Uniformly pick a location 
+c     rtot = xran*rarr(nrg) ! Uniformly pick a location 
       rsq = rtot*rtot
 
       zp=rtot*cosb
@@ -59,7 +59,7 @@ c     rtot = dcbrt(xran)*rarr(nrg) ! Uniformly pick a location
       call locate(rarr,nrg,nrg,rtot,ir)
       ii(1)=ir
       if (ntg.gt.1) then
-         thetb=acos(cosb)
+         thetb=dacos(cosb)
          call locate(thetarr,ntg,ntg,thetb,it)
          ii(2)=it
       else
