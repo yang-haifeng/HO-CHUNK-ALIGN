@@ -25,6 +25,7 @@ c 00/09/06 (baw): write subroutine
       integer ir,it,ip,nttmp,gflag,n,ix,iy,irbeg,nrwall,ntatm,iinc,flag
 
       real*8 linterp
+      real*8 tempEps
 
       pi=4.d0*datan(1.d0)
       r2p=2.d0*pi
@@ -286,6 +287,8 @@ c     phi-ave array
 c     calculate density and B-field in grid
       massenv=0.d0
       massdisk=0.d0
+      totalEps=0.d0
+      maxEps=0.d0
       do ir=1,nrg-1
          rad=0.5d0*(rarr(ir)+rarr(ir+1))
          dr=rarr(ir+1)-rarr(ir)
@@ -322,6 +325,12 @@ c                    sinpbzarr(ir,it,ip)=sinpbz
                      sinpbzarr(ir,it,ip)=0.
 
 		     temparr(ir,it,ip)=30.!Constant Temperature
+
+		     tempEps=temparr(ir,it,ip)*massarr(ir,it,ip)
+		     totalEps=totalEps+tempEps
+		     if (tempEps>maxEps) then
+		       maxEps=tempEps
+		     endif
                   end do
                else             !2-D atmosphere
                   ip=1       
