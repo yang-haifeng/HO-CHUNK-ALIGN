@@ -41,7 +41,6 @@ c     sample cosp, sinp, direction of photon in phi
       xran = ran2(i1)
       ip = int(xran*(npg-1))+1
 
-      print*,"****************:",ir,it,ip
       currentEps=massarr(ir,it,ip)*temparr(ir,it,ip)
       xran = ran2(i1)
       if (xran*maxEps>currentEps) then
@@ -65,5 +64,9 @@ c     sample location of the photon in longitude
       ux=sint*cosp
       uy=sint*sinp
       uz=cost
+
+      ii(1)=ir
+      ii(2)=it
+      ii(3)=ip
 
       end
