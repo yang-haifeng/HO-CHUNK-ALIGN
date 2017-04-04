@@ -41,6 +41,7 @@ c     sample cosp, sinp, direction of photon in phi
       xran = ran2(i1)
       ip = int(xran*(npg-1))+1
 
+      print*,"****************:",ir,it,ip
       currentEps=massarr(ir,it,ip)*temparr(ir,it,ip)
       xran = ran2(i1)
       if (xran*maxEps>currentEps) then
@@ -52,7 +53,7 @@ c     sample cosb, sinb, location of the photon in latitude
       cosb=dcos(thetb)
       sinb=dsin(thetb)
 c     sample location of the photon in longitude
-      lp=0.5*(phiarr(ip)+phiarr(ip))
+      lp=0.5*(phiarr(ip)+phiarr(ip+1))
 
       rtot = 0.5*(rarr(ir)+rarr(ir+1))
       rsq = rtot*rtot
