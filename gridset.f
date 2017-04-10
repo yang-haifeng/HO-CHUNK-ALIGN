@@ -324,7 +324,7 @@ c                    sinpbzarr(ir,it,ip)=sinpbz
                      cospbzarr(ir,it,ip)=1.
                      sinpbzarr(ir,it,ip)=0.
 
-		     temparr(ir,it,ip)=30.!Constant Temperature
+		     temparr(ir,it,ip)=30./rad**2 !Inverse sq Temperature
 
 		     tempEps=temparr(ir,it,ip)*massarr(ir,it,ip)
 		     totalEps=totalEps+tempEps
