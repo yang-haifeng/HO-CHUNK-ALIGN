@@ -67,9 +67,11 @@ c     mH = 1.67d-24 (grams of mH)
       write(12,*) ' reading in dust properties from file ',filename
 
       open(unit=66,file=filename,form='unformatted')
+      open(unit=99,file="kappa.txt",form='formatted',action='write')
 
 c ... get file array size info
       read(66) nwav,nthetab,ntheta,ndphi
+      write(99,*) nwav,nthetab,ntheta,ndphi
       print*,' NWAV = ',nwav
       print*,' NTHETAB = ',nthetab
       print*,' NTHETA = ',ntheta
@@ -84,26 +86,43 @@ c ... check array sizes
 c ... score the data
       read(66) wave
       print*,'wavelength',wave
+      write(99,*) wave
+
       read(66) (cosbarr(i),i=1,nthetab)
       print*,'cosbarr(1),cosbarr(nthetab)',cosbarr(1),cosbarr(nthetab)
+      write(99,*) (cosbarr(i),i=1,nthetab)
+
       read(66) (cosarr(i), i=1,ntheta)
       print*,'cosarr(1),cosarr(ntheta)',cosarr(1),cosarr(ntheta)
+      write(99,*) (cosarr(i), i=1,ntheta)
+
       read(66) (dphi(i), i=1,ndphi)
       print*,'dphi(1),dphi(ndphi)',dphi(1),dphi(ndphi)
-c     stop
+      write(99,*) (dphi(i), i=1,ndphi)
+
       read(66) (kapd(i),i=1,nthetab)      !Cext
       print*, (kapd(i),i=1,nthetab)
+      write(99,*) (kapd(i),i=1,nthetab)
+
       read(66) ((kapsca(i,j),i=1,4),j=1,nthetab)      !Csca
-c      stop
+      write(99,*) ((kapsca(i,j),i=1,4),j=1,nthetab)      
+
       do i=1,nthetab
          rlam(i) = kapsca(1,i)
       enddo
       read(66) (kapd_q(i),i=1,nthetab)    !Cpol
+      write(99,*) (kapd_q(i),i=1,nthetab)    !Cpol
+
       read(66) (Ccpol(i),i=1,nthetab)     !Ccpol
+      write(99,*) (Ccpol(i),i=1,nthetab)     !Ccpol
+
       read(66) (((((Fmat(j,k,l,m,i),j=1,4),k=1,4),
+     &     l=1,nthetab),m=1,ntheta),i=1,ndphi)
+      write(99,*) (((((Fmat(j,k,l,m,i),j=1,4),k=1,4),
      &     l=1,nthetab),m=1,ntheta),i=1,ndphi)
 
       close(66)
+      close(99)
 
       avealb=0.d0
       avekapi=0.d0
